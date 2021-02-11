@@ -1,0 +1,9 @@
+api = "0.2"
+
+[buildpack]
+id = "com.guild.shell"
+version = "0.0.1"
+name = "Guild Buildpack Shell Runner"
+
+[[stacks]]
+id = "heroku-18"

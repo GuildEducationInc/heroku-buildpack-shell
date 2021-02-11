@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e
+set -o pipefail
+
+function build() {
+    echo "Running infra/cnb-build.sh"
+
+    if [[ -f "infra/cnb-build.sh" ]]; then
+        source infra/cnb-build.sh
+    else
+        echo "infra/build-cnb.sh not found. Skipping..."
+    fi
+}
+
+build | sed 's/^/-----> /g'
